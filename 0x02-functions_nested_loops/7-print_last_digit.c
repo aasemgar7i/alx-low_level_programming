@@ -20,5 +20,5 @@ int print_last_digit(int y)
 
 	_putchar(z + '0');
 
-	return (0);
+	return (z);
 }
