@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 
-/*
-* int _isupper(int c) : define only C
-*
+/**
+* _isupper - checks for uppercase character
+* @c: char ad int
 * Return: 0 otherwise
 */
 
-int _isupper(int c)
-{
-	return (c >= 65 && c <= 90);
-}
+	int _isupper(int c)
+	{
+		return (c >= 65 && c <= 90);
+	}
