@@ -10,7 +10,8 @@ void print_numbers(void)
 	int rf;
 
 	if (rf >= 48 && rf <= 57)
-	_putchar(rf + '0');
+		putchar(rf + '0');
 
+	_putchar(\n);
 	rf++;
 }
