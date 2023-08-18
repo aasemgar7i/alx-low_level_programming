@@ -9,6 +9,6 @@ void print_most_numbers(void)
 {
 	int g = 0;
 
-	while (g != 2; g != 4)
+	while (g != 2; g != 4; g++)
 		_putchar(g + '0');
 }
