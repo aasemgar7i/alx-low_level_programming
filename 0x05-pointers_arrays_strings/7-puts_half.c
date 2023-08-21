@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+* puts_half - print last half of string
+* @str: input
+* Return: 0
+*/
+
 void puts_half(char *str)
 {
 	int qunt;
@@ -11,7 +17,7 @@ void puts_half(char *str)
 	if (qunt % 2 == 0)
 	{
 		hf = qunt / 2;
-	}else
+	} else
 		hf = (qunt / 2) + 1;
 	for (sho = hf; str[sho] != '\0'; sho++)
 	{
