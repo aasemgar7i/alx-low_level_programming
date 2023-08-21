@@ -1,7 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
-void print_array(int *a,int n)
+/**
+* print_array - print array with n blocks
+* @a: array input
+* @n: blocks of array
+* Return: 0
+*/
+
+void print_array(int *a, int n)
 {
 	int r;
 
