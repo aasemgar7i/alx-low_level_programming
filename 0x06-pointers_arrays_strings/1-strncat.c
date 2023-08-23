@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+* *_strncat - fanction input
+* @dest: output
+* @src: input
+* @n: intger of array print
+* Return: dest
+*/
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int q, w;
