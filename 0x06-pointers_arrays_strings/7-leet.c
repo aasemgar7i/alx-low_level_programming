@@ -10,8 +10,8 @@ char *leet(char *s)
 {
 	int q, w;
 
-	char *l = "aAeEoOtTlL"
-	char *r = "4433007711"
+	char *l = "aAeEoOtTlL";
+	char *r = "4433007711";
 
 	for (q = 0; s[q] != '\0'; q++)
 	{
