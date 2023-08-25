@@ -1,26 +1,27 @@
 #include "main.h"
 
 /**
-* rot13 - input function
-* @str: output
-* Return: str
+* rot13 - input fun
+* @s: output
+* Return: s
 */
 
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i;
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; *(s + i); i++)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
+		for (j = 0; j < 52; j++)
 		{
-			str[i] = ((str[i] - 'A' + 13) % 26) + 'A';
-		}
-		else if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = ((str[i] - 'a' + 13) % 26) + 'a';
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
 	}
-
-	return (str);
+	return (s);
 }
