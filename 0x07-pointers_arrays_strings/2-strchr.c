@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* _strchar - founction to locate
+* @s: output
+* @c: locate character
+* Reutrn: s
+*/
+
 char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
