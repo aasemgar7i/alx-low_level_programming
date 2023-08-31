@@ -9,12 +9,12 @@
 
 int is_prime(int n, int i)
 {
-	if (i <= 1)
+	if (n <= 1)
 		return (0);
-	if (i == 0)
+	if (i == 1)
 		return (1);
 	if (n % i == 0)
-		return (1);
+		return (0);
 	return (is_prime(n, i - 1));
 }
 
