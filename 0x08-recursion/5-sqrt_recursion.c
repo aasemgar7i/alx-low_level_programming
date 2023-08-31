@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+* _sqrt - function helps other
+* _sqrt_recursion - main input
+*/
+
 int _sqrt(int n, int i)
 {
 	if (i * i == n)
