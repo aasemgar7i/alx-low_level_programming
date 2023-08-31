@@ -2,7 +2,9 @@
 
 /**
 * _sqrt - function helps other
-* _sqrt_recursion - main input
+* @n: input
+* @i: intger to see if number is can be sqrt
+* Return: loop for get answer
 */
 
 int _sqrt(int n, int i)
@@ -13,6 +15,12 @@ int _sqrt(int n, int i)
 		return (-1);
 	return (_sqrt(n, i + 1));
 }
+
+/**
+* _sqrt_recursion - main input
+* @n: input
+* Return: result of _sqrt
+*/
 
 int _sqrt_recursion(int n)
 {
