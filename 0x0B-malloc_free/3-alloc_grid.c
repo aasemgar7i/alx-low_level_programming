@@ -11,19 +11,20 @@
 int **alloc_grid(int width, int height)
 {
 	int **fun;
+	int i, o;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
 	fun = (int **) malloc(sizeof(int *) * height);
 
-	for (int i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
 		fun[i] = (int *) malloc(sizeof(int) * width);
 		if (fun[i] == NULL)
 		{
 			free(fun);
-			for (int o = 0; o <= i; o++)
+			for (o = 0; o <= i; o++)
 				free(fun[o]);
 			return (NULL);
 		}
