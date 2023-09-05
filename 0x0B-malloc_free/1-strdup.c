@@ -9,7 +9,7 @@
 
 char *_strdup(char *str)
 {
-	unsignd int i, o;
+	unsigned int i, o;
 	char *mirror;
 
 	i = 0;
