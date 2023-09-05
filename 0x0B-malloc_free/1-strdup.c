@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	while (str[o])
 		o++;
 
-	mirror = malloc(sizeof(char *) * (o + 1));
+	mirror = malloc(sizeof(char) * (o + 1));
 
 	if (mirror == NULL)
 		return (NULL);
