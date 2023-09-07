@@ -1,47 +1,45 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
-* string_nconcat - main funcation for constrate two string
-* @s1: input
-* @s2: input
-* @n: count of printed s2
-* Return: o
-*/
-
+ * *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes from s2 to concatenate to s1
+ *
+ * Return: pointer to the resulting string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, u = 0, d = 0, e = 0;
-	char *o;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (u = 0; s2[u] != '\0'; u++)
-		;
-	if (n < u)
-		o = malloc(sizeof(char) * (i + n + 1));
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
 	else
-		o = malloc(sizeof(char) * (i + u + 1));
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (o == NULL)
+	if (!s)
 		return (NULL);
 
-	while (d < i)
+	while (i < len1)
 	{
-		o[d] = s1[d];
-		d++;
+		s[i] = s1[i];
+		i++;
 	}
 
-	while (n < u && d < (i + n))
-	{
-		o[d++] = s2[e++];
-	}
-	while (n >= u && d < (i + u))
-	{
-		o[d++] = s2[e++];
-	}
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
 
-	o[d] = '\0';
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
 
-	return (o);
+	s[i] = '\0';
+
+	return (s);
 }
