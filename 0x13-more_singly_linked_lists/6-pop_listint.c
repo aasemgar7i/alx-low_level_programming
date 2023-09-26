@@ -12,12 +12,12 @@ int pop_listint(listint_t **head)
 	int io = 0;
 
 	if (head == NULL || *head == NULL)
-		return 0;
+		return (0);
 
 	hok = *head;
 	*head = hok->next;
 	io = hok->n;
 	free(hok);
 
-	return io;
+	return (io);
 }
