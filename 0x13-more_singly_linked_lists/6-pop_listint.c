@@ -3,6 +3,7 @@
 /**
 * pop_listint - main function
 * @head: input
+* Return: data on node number n
 */
 
 int pop_listint(listint_t **head)
